@@ -472,9 +472,7 @@ public final class BatteryService extends SystemService {
                         mContext.sendBroadcastAsUser(statusIntent, UserHandle.ALL);
                     }
                 });
-            } 
-	    
-	    else if (mSentLowBatteryBroadcast && mLastBatteryLevel >= mLowBatteryCloseWarningLevel) {
+            } else if (mSentLowBatteryBroadcast && mLastBatteryLevel >= mLowBatteryCloseWarningLevel) {
                 mSentLowBatteryBroadcast = false;
                 mHandler.post(new Runnable() {
                     @Override
